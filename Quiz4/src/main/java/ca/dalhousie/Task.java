@@ -19,6 +19,10 @@ public class Task {
     }
 
     public boolean assignTo(TeamMember teamMember) {
+        if (teamMember == null) {
+            return false;
+        }
+        this.assignee = teamMember;
         return true;
     }
 }
