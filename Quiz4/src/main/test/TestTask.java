@@ -38,4 +38,14 @@ public class TestTask {
         assertFalse(task.updateStatus(null));
     }
 
+    @Test
+    public void testIsOverdue_true() {
+        assertTrue(task.isOverdue());
+    }
+
+    @Test
+    public void testIsOverdue_false() {
+        assertFalse(task.isOverdue());
+    }
+
 }
