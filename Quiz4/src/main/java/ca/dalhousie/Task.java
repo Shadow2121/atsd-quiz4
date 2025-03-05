@@ -36,6 +36,9 @@ public class Task {
 
 
     public boolean isOverdue() {
-        return true;
+        if (status != Status.FINISHED && dueDate.toInstant().isBefore(new Date().toInstant())) {
+            return true;
+        }
+        return false;
     }
 }
