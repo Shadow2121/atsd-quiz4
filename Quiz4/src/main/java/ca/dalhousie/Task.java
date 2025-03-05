@@ -27,6 +27,10 @@ public class Task {
     }
 
     public boolean updateStatus(Status status) {
+        if (status == null) {
+            return false;
+        }
+        this.status = status;
         return true;
     }
 }
