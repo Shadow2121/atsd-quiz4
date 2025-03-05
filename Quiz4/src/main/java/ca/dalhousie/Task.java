@@ -25,4 +25,8 @@ public class Task {
         this.assignee = teamMember;
         return true;
     }
+
+    public boolean updateStatus(Status status) {
+        return true;
+    }
 }

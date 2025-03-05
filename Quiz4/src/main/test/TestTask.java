@@ -1,3 +1,4 @@
+import ca.dalhousie.Status;
 import ca.dalhousie.Task;
 import ca.dalhousie.TeamMember;
 import org.junit.Test;
@@ -25,6 +26,16 @@ public class TestTask {
     public void testAssignTo_fail() {
         teamMember = null;
         assertFalse(task.assignTo(teamMember));
+    }
+
+    @Test
+    public void testUpdateStatus_success() {
+        assertTrue(task.updateStatus(Status.IN_PROGRESS));
+    }
+
+    @Test
+    public void testUpdateStatus_fail() {
+        assertFalse(task.updateStatus(null));
     }
 
 }
